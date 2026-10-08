@@ -1,0 +1,28 @@
+experiment_id: plp-unet-100
+model: baseline
+dataset_name: llvip
+dataset_version: iccvw-2021-aligned
+seed: 42
+split_seed: 42
+val_ratio: 0.1
+training_fraction: 1.0
+image_size: 128
+batch_size: 8
+epochs: 20
+learning_rate: 0.001
+optimizer: adam
+scheduler: none
+loss: l1
+precision: amp
+num_workers: 2
+flip_probability: 0.5
+smoke: false
+smoke_batches: 2
+checkpoint_every_epoch: true
+diffusion_steps: 1000
+ddim_steps: 50
+gallery_size: 8
+notes: >
+  Equal epoch budget across fractions. Validation is 10% of the official
+  training split and does not change with the fraction. Evaluation uses the
+  lowest validation loss checkpoint.

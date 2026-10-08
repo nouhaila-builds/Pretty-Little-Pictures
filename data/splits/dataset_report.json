@@ -1,0 +1,33 @@
+{
+  "root": "data\\LLVIP\\LLVIP",
+  "splits": {
+    "train": {
+      "status": "ok",
+      "pairs": 12025,
+      "rgb_mode": "RGB",
+      "rgb_size": [
+        1280,
+        1024
+      ],
+      "thermal_mode": "RGB",
+      "thermal_size": [
+        1280,
+        1024
+      ]
+    },
+    "test": {
+      "status": "ok",
+      "pairs": 3463,
+      "rgb_mode": "RGB",
+      "rgb_size": [
+        1280,
+        1024
+      ],
+      "thermal_mode": "RGB",
+      "thermal_size": [
+        1280,
+        1024
+      ]
+    }
+  }
+}

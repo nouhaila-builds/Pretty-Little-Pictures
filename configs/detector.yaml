@@ -1,0 +1,27 @@
+experiment_id: plp-detector-real-ir
+model: detector
+dataset_name: llvip
+dataset_version: iccvw-2021-aligned
+seed: 42
+split_seed: 42
+training_fraction: 1.0
+image_size: 320
+batch_size: 4
+epochs: 12
+learning_rate: 0.00005
+optimizer: adamw
+scheduler: none
+precision: amp
+num_workers: 2
+architecture: fasterrcnn_mobilenet_v3_large_fpn
+initialization: coco_pretrained
+classes: [person]
+score_threshold: 0.5
+iou_threshold: 0.5
+metric: ap50
+status: pending
+notes: >
+  Train once on real infrared from train_100. Freeze the weights.
+  Evaluate on real test infrared and on synthetic infrared generated from
+  the same RGB test frames by plp-diffusion-100, 20, 05, and 01.
+  This does not test synthetic images as detector training data.

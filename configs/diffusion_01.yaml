@@ -1,0 +1,27 @@
+experiment_id: plp-diffusion-01
+model: diffusion
+dataset_name: llvip
+dataset_version: iccvw-2021-aligned
+seed: 42
+split_seed: 42
+val_ratio: 0.1
+training_fraction: 0.01
+image_size: 128
+batch_size: 8
+epochs: 30
+learning_rate: 0.0001
+optimizer: adam
+scheduler: none
+loss: noise_mse
+precision: amp
+num_workers: 2
+flip_probability: 0.5
+smoke: false
+smoke_batches: 2
+checkpoint_every_epoch: true
+diffusion_steps: 1000
+ddim_steps: 50
+gallery_size: 8
+notes: >
+  Nested prefix of the 5% training pool. Same architecture, seed, and epoch
+  count as plp-diffusion-100. Only the training list changes.
